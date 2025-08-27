@@ -9,4 +9,4 @@ este es un proyecto que utiliza tecnologias como **html**, **css** y ** javascri
 
 ---
 
-## Estructura de la página
+##📑 Estructura de la página
