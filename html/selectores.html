@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Selector.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+    <section>
+    <h1>SELECTORES</h1>
+
+    <h2>Definición y Uso</h2>
+
+    <p>En CSS, los selectores son patrones
+        utilizados para seleccionar y aplicar
+        estilos a los elementos de un documento HTML.
+        Básicamente, un selector permite identificar
+        qué elementos del HTML serán afectados por las
+        reglas de estilo definidas en CSS.
+
+        El concepto básico de un selector es
+        que se utiliza para "apuntar" a los elementos
+        HTML en los cuales deseas aplicar ciertos estilos
+        (colores, márgenes, tamaños, etc.).</p>
+
+    </section>
+
+</header>
+    <main>
+        <section>
+            <table border="1" cellpadding="1" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Tipo de Selector</th>
+                        <th>Ejemplo</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Selectores Básicos -->
+                    <tr>
+                        <td rowspan="5"><strong>1. Selectores Básicos</strong></td>
+                        <td><code>*</code></td>
+                        <td>Selector universal: selecciona todos los elementos del documento.
+                            Útil para aplicar estilos globales como <code>box-sizing</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>p</code> o <code>div</code></td>
+                        <td>Selector de elemento: selecciona elementos por su nombre de etiqueta HTML.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.clase</code></td>
+                        <td>Selector de clase: selecciona todos los elementos que tengan una clase específica.</td>
+                    </tr>
+                    <tr>
+                        <td><code>#id</code></td>
+                        <td>Selector de ID: selecciona un único elemento con un ID específico. Los IDs deben ser únicos.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>[title]</code> o <code>a[href="#top"]</code></td>
+                        <td>Selector de atributo: selecciona elementos que tienen un atributo o valor específico.</td>
+                    </tr>
+
+                    <!-- Selectores Combinadores -->
+                    <tr>
+                        <td rowspan="4"><strong>2. Selectores Combinadores</strong></td>
+                        <td><code>div p</code></td>
+                        <td>Selector de descendientes: selecciona todos los elementos <code>p</code> dentro de un
+                            <code>div</code>, sin importar la profundidad.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ul &gt; li</code></td>
+                        <td>Selector de hijos directos: selecciona solo los <code>li</code> que son hijos directos de un
+                            <code>ul</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>h2 + p</code></td>
+                        <td>Selector de hermano adyacente: selecciona el </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <a href="../index.html">volver atrás</a>
+</body>
+</html>
