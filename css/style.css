@@ -51,7 +51,7 @@ header {
 }
 
 .submenu {
-    display: none;
+    display:none;
     position: absolute;
     left: 0;
     top: 100%;
@@ -60,11 +60,12 @@ header {
 }
 
 .menu_item:hover .submenu {
-    display: block;
+    display:block;
 }
 
 .submenu li  {
     display: block;
+    width: 100%;
 }
 
 .submenu li a:hover {
