@@ -42,7 +42,7 @@ function checkPasswords() {
     if (password.value && password2.value) {
         if (password.value === password2.value) {
             password.style.border = "2px solid green";
-            password2assword.style.border = "2px solid green";
+            password2.style.border = "2px solid green";
             btn_validar.disabled = false;
         } else {
             password.style.border = "2px solid red";
@@ -114,7 +114,7 @@ function validar(){
         );
 
         return
-        
+
     }
     if(specialchar && lowercase && uppercase && number){
         Swal.fire(

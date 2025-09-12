@@ -10,9 +10,9 @@
 document.write("Hola desde el dom");
 
 // ####### TIPOS DE VARIABLES
-var edad = 33; // alcance global
-let num = 33; // alcance de bloque
-const nombre = "Wilder Duarte"; // no cambia su valor
+var edad = 37; // alcance global
+let num = 37; // alcance de bloque
+const nombre = "Miguel Salazar"; // no cambia su valor
 const pi = 3.14; // no cambia su valor
 const pulgada = 2.54; // no cambia su valor
 
@@ -41,20 +41,20 @@ var clase = "Prog.  Básica" // String
 var numero = 5 // Número entero
 var decimal = 2.5 // Número decimal
 var booleano = true // Boolean (false/true)
-var objeto = {nombre: "Wilder", edad: 33, profesion: "Docente"};
+var objeto = {nombre: "MiguelSalazar", edad: 37, profesion: "MecánicoDiesel"};
 var array = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
 var array_num = [1,2,3,4,5,6,7,8,9];
 var array_mix = [1,"uno",20,"fiesta",2.5,"decimal"];
 
 let estudiantes = [
-    {nombre: "Wilder", edad: 33},
-    {nombre: "Anyi", edad: 34},
-    {nombre: "Celeste", edad: 4},
-    {nombre: "Antonella", edad: 3},
-    {nombre: "Sara", edad: 0}
+    {nombre: "MiguelSalazar", edad: 37},
+    {nombre: "MiguelEsteban", edad: 13},
+    {nombre: "MiguelAngel", edad: 9},
+    {nombre: "AslheySalomé", edad: 9},
+    {nombre: "Antonella", edad: 1}
 ];
 let curso = {
-    nombre: "Programación",
+    nombre: "ProgramaciónBásica",
     temas: ["HTML", "CSS", "JS"]
 };
 
@@ -69,16 +69,35 @@ let curso = {
 // console.log(curso.temas);
 // console.log(curso.temas[1]);
 
+//#### OPERADORES LÓGICOS
 
+// (1) AND (&&)
+// console.log(true && true); // true
+// console.log(true && false); // false
+// console.log(false && false); // false
 
+// (2) OR (||)
+// console.log(true || true); // true
+// console.log(true || false); // true
+// console.log(false || true); // true
+// console.log(false || false); // false
 
+// (3) NOT (!)
+// console.log(!true); // false
+// console.log(!false); // true
+// console.log(!(5 > 10)); // true
 
+// #### BUCLES O LOOPS
+// (1) For
+/*
+for (let i = 0; i < 10; i++) {
+     console.log("Número: " + i);
+}
+*/
 
-
-
-
-
-
+// WHILE Y probar DOWHILE
+/*
+let contador = 0;
 
 
 
