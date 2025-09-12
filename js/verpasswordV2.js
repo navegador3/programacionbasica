@@ -33,44 +33,74 @@ function toggleVisibility(input, icon) {
     icon.classList.toggle("fa-eye");
     icon.classList.toggle("fa-eye-slash");
 }
-toggle_password1.addEventListener("click", () => toggleVisibility(password1, toggle_password1));
-toggle_password2.addEventListener("click", () => toggleVisibility(Password2, toggle_passwoed2));
+
+toggle_password.addEventListener("click", () => toggleVisibility(password, toggle_password));
+toggle_confirm.addEventListener("click", () => toggleVisibility(password2, toggle_confirm));
 
 // Función de validación de igualdad
 function checkPasswords() {
-    if (password1.value && Password2.value) {
-        if (password1.value === Password2.value) {
-            password1.style.border = "2px solid green";
-            Password2.style.border = "2px solid green";
+    if (password.value && password2.value) {
+        if (password.value === password2.value) {
+            password.style.border = "2px solid green";
+            password2assword.style.border = "2px solid green";
             btn_validar.disabled = false;
         } else {
-            password1.style.border = "2px solid red";
-            Password2.style.border = "2px solid red";
+            password.style.border = "2px solid red";
+            password2.style.border = "2px solid red";
             btn_validar.disabled = true;
         }
     } else {
         // Si falta alguno, desactivar botón y quitar colores
-        password1.style.border = "1px solid #ccc";
-        Password.style.border = "1px solid #ccc";
+        password.style.border = "1px solid #ccc";
+        password2.style.border = "1px solid #ccc";
         btn_validar.disabled = true;
     }
 }
 
 // Escuchar cambios en ambos inputs (tiempo real)
-password1.addEventListener("input", checkPasswords);
-Password2.addEventListener("input", checkPasswords);
+password.addEventListener("input", checkPasswords);
+password2.addEventListener("input", checkPasswords);
 
 // Validación completa
 function validar() {
     // Reconfirmar que sean iguales
-    if (password1.value !== Password2.value) {
-       
+    if (password.value !== password2.value) {
         Swal.fire("Error", "Las contraseñas no coinciden.", "error");
         return;
     }
 
+    let pwd = password.value;
+    let lowercase = /[a-z]/.test(pwd);
+    let uppercase = /[A-Z]/.test(pwd);
+    let number = /\d/.test(pwd);
+    let specialchar = /[\W_]/.test(pwd);
+
+    if (pwd.length < 8) {
+        Swal.fire("Error", "La contraseña debe tener al menos 8 caracteres.", "error");
+        return;
+    }
+
+    if (specialchar && lowercase && uppercase && number) {
+        Swal.fire("Correcto", "La contraseña cumple con las condiciones.", "success");
+    } else {
+        Swal.fire({
+            icon: "error",
+            title: "Contraseña Inválida",
+
+ html: `
+                <ul style="text-align:left; margin-left:20px;">
+                    <li>${number ? "✅" : "❌"} Al menos un número</li>
+                    <li>${lowercase ? "✅" : "❌"} Al menos una minúscula</li>
+                    <li>${uppercase ? "✅" : "❌"} Al menos una mayúscula</li>
+                    <li>${specialchar ? "✅" : "❌"} Al menos un caracter especial</li>
+                </ul>
+            `
+        });
+    }
+}
 
 
+function validar(){
     let password    = document.getElementById("password").value;
     let lowercase   = /[a-z]/.test(password);
     let uppercase   = /[A-Z]/.test(password);
@@ -84,8 +114,8 @@ function validar() {
         );
 
         return
-    };
-
+        
+    }
     if(specialchar && lowercase && uppercase && number){
         Swal.fire(
             "Correcto",
@@ -99,7 +129,7 @@ function validar() {
             icon: "error",
             title: "Contraseña Invalida",
             html: `
-                <ul style="text-align:left; margin-left:20px;color:red;">
+                <ul style="text-align:left; margin-left:20px;">
                     <li>${number ? "✅" : "❌" } Al menos un número</li>
                     <li>${lowercase ? "✅" : "❌" } Al menos una minúscula</li>
                     <li>${uppercase ? "✅" : "❌" } Al menos una mayúscula</li>
@@ -108,8 +138,5 @@ function validar() {
             `
         });                 
     }
+
 } 
-
-
-
-
