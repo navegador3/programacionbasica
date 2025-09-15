@@ -1,0 +1,81 @@
+ body {
+      font-family: Arial, sans-serif;
+      background: hwb(157 47% 11%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: rgb(211, 112, 112);
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: hwb(239 38% 7%);
+    }
+
+   /* ======== INPUT + BOTÓN ======== */
+    input[type="text"] {
+      width: 70%;
+      padding: 8px;
+      border: 1px solid hsl(192, 46%, 30%);
+      border-radius: 6px;
+      outline: none;
+    }
+
+    button {
+      padding: 8px 12px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-left: 5px;
+      transition: background 0.2s;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+    
+    /* ======== LISTA DE TAREAS ======== */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    li {
+      background: #f9f9f9;
+      margin-bottom: 8px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+
+      display: flex;
+      justify-content: space-between;
+      /* Texto a la izquierda y botón a la derecha */
+      align-items: center;
+    }
+
+    .btn-eliminar {
+      background: none;
+      border: none;
+      color: red;
+      cursor: pointer;
+      font-size: 18px;
+      margin-left: 10px;
+    }
+
+    .btn-eliminar:hover {
+      background: #e60000;
+    }
