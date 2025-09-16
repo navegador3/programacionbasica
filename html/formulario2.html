@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../css/formulario2.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>FORMULARIO</title>
+</head>
+<body>
+    <section>
+
+        <h1>Información de contacto</h1>
+        <form>
+        <label for="nombre">Nombres:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="apellido">Apellidos:</label><br>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+
+        <label for="tipodeidentificación">Tipo de Identificación:</label><br>
+        <select id="tipodeidentificación" name="tipodeidentificación">
+            <option value="cedulaciudadanía">Cedula Ciudadanía</option>
+            <option value="cedulaextranjeria">Cedula Extranjeria</option>
+            <option value="tarjetaidentidad">Tarjeta Identidad</option>
+            <option value="registocivil">Registro Civil</option>
+            <option value="otro">Otro</option>
+        </select><br><br>
+        
+
+        <label for="númerodeidentificación">Número de Identificación:</label><br>
+        <input type="text" id="númerodeidentificación" name="númerodeidentificación" required><br><br>
+
+        <label for="email">Email@:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telefono">Número de Teléfono:</label><br>
+        <input type="tel" id="telefono" name="telefono" required><br><br>
+
+        <label for="date">Fecha de nacimiento:</label><br>
+        <input type="date" id="fechadenacimiento" name="fechadenacimiento" required><br><br>
+
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="40" required></textarea><br><br>
+
+        <label for="genero">Género:</label><br>
+        <select id="genero" name="genero">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select><br><br>
+
+     <div class="container">
+        <div class="inputs">
+        <input type="password" id="password" placeholder="Ingrese su contraseña">
+            <i class=" toggle_password"></i>
+        </div>
+
+        <div class="inputs">
+            <input type="password" id="password2" placeholder="Confirme su contraseña">
+            <i class=" toggle_password"></i>
+
+        </div>
+
+        </div>
+
+        <button id="btn_enviar" onclick="enviar()">Enviar</button>
+        <button id="btn_limpiar" onclick="limpiar()">Limpiar</button>
+
+    </div>
+    </section>
+
+    <script src="../js/formulario2.js"></script>
